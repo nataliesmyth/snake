@@ -12,7 +12,11 @@ const gameBoard = document.getElementById('game-board');
 // current time is the exact time stamp of when the function runs
 function main(currentTime) {
     if (gameOver) {
-        return alert('you lose')
+        if (confirm('You lost. Press okay to restart.')) {
+            // refresh our page to restart game
+            window.location = '/';
+        }
+        return
     }
 
     window.requestAnimationFrame(main)
