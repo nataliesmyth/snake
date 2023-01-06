@@ -22,6 +22,7 @@ export function draw(gameBoard) {
 
 function getRandomFoodPosition() {
     let newFoodPosition;
+    // prevent food from appearing on any space taken up by the snake
     while (newFoodPosition == null || onSnake(newFoodPosition)) {
         newFoodPosition = randomGridPosition();
     }
