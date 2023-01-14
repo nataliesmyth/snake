@@ -14,7 +14,7 @@ function main(currentTime) {
     if (gameOver) {
         if (confirm('You lost. Press okay to restart.')) {
             // refresh our page to restart game
-            window.location = '/';
+            window.location.href = 'https://nataliesmyth.com/snake/';
         }
         return
     }
